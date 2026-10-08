@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Кофейня «Аромат» — свежий кофе в центре города</title>
+  <meta name="description" content="Кофейня «Аромат»: авторский кофе, свежие десерты и зерно с собой. Закажите столик или кофе с собой." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-amber-50 text-stone-800 font-sans">
+
+  <header class="bg-stone-900 text-amber-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="text-2xl font-bold tracking-tight">☕ Аромат</a>
+      <nav aria-label="Основная навигация">
+        <ul class="flex gap-4 text-sm sm:text-base">
+          <li><a class="hover:text-amber-300 transition" href="#about">О нас</a></li>
+          <li><a class="hover:text-amber-300 transition" href="#services">Услуги</a></li>
+          <li><a class="hover:text-amber-300 transition" href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / О бизнесе -->
+    <section id="about" class="max-w-6xl mx-auto px-4 py-12 sm:py-16 text-center">
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-stone-900 mb-4">Кофейня «Аромат» — место, куда хочется возвращаться</h1>
+      <p class="max-w-2xl mx-auto text-lg text-stone-600 mb-8">
+        Варим кофе на зерне локальной обжарки, печём круассаны каждое утро
+        и создаём уют в центре города. Работаем ежедневно с 8:00 до 22:00.
+      </p>
+      <a href="#contact" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-semibold px-8 py-3 rounded-full transition shadow-lg">
+        Оставить заявку
+      </a>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="max-w-6xl mx-auto px-4 pb-14">
+      <h2 class="text-3xl font-bold text-center text-stone-900 mb-8">Наши услуги</h2>
+
+      <div class="cards">
+        <article class="card bg-white rounded-2xl shadow-md p-6 border border-amber-100">
+          <div class="text-4xl mb-3" aria-hidden="true">🥤</div>
+          <h3 class="text-xl font-semibold mb-2">Кофе с собой</h3>
+          <p class="text-stone-600">Эспрессо, капучино, латте и фильтр за 3 минуты. Скидка 10% со своей кружкой.</p>
+        </article>
+
+        <article class="card bg-white rounded-2xl shadow-md p-6 border border-amber-100">
+          <div class="text-4xl mb-3" aria-hidden="true">🍰</div>
+          <h3 class="text-xl font-semibold mb-2">Десерты и завтраки</h3>
+          <p class="text-stone-600">Круассаны, чизкейки и сытные завтраки весь день. Всё готовим сами.</p>
+        </article>
+
+        <article class="card bg-white rounded-2xl shadow-md p-6 border border-amber-100">
+          <div class="text-4xl mb-3" aria-hidden="true">🫘</div>
+          <h3 class="text-xl font-semibold mb-2">Зерно и аксессуары</h3>
+          <p class="text-stone-600">Свежеобжаренное зерно, дрипы и воронки домой. Поможем выбрать помол.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Форма -->
+    <section id="contact" class="bg-stone-900 text-amber-50">
+      <div class="max-w-xl mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold text-center mb-3">Забронировать столик</h2>
+        <p class="text-center text-stone-300 mb-8">Оставьте имя и телефон — перезвоним за 10 минут и подтвердим бронь.</p>
+
+        <form id="lead-form" class="bg-white text-stone-800 rounded-2xl p-6 sm:p-8 shadow-xl" novalidate>
+          <div class="mb-4">
+            <label for="name" class="block font-semibold mb-1">Имя</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Например, Анна"
+              autocomplete="name"
+              class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="phone" class="block font-semibold mb-1">Телефон</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+7 (___) ___-__-__"
+              autocomplete="tel"
+              class="w-full border border-stone-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            />
+          </div>
+
+          <p id="form-message" class="form-message" role="alert" aria-live="polite"></p>
+
+          <button
+            type="submit"
+            class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 rounded-xl transition"
+          >
+            Жду звонка
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-stone-950 text-stone-300">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col sm:flex-row gap-2 items-center justify-between text-sm">
+      <p>© 2026 Кофейня «Аромат». Все права защищены.</p>
+      <p>г. Москва, ул. Примерная, 1 · ежедневно 8:00–22:00 · +7 (495) 123-45-67</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
